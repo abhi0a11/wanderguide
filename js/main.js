@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.innerHTML = `
           <div class="destination-card__image">
-            <img src="${placeholderImg}" data-src="${dest.imageUrl}" alt="${escapeHtml(dest.name)}" />
+            <img src="${placeholderImg}" data-src="${dest.imageUrl}" alt="${escapeHtml(dest.name)}" loading="lazy" />
           </div>
           <div class="destination-card__body">
             <h3 class="destination-card__name">${highlightText(dest.name, searchQuery)}</h3>
@@ -208,6 +208,19 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
   }
 
+  // Close menu when nav link is clicked
+  function closeMenu() {
+    if (!siteNavigation || !menuToggle) return;
+    siteNavigation.classList.remove('is-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open menu');
+  }
+
+  const navLinks = siteNavigation ? siteNavigation.querySelectorAll('a') : [];
+  navLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
   function handleContinentFilter(event) {
     activeContinent = event.target.dataset.continent;
     filterDestinations();
@@ -260,6 +273,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuToggle) {
     menuToggle.addEventListener('click', toggleMenu);
+  }
+
+  // Newsletter form handling
+  const newsletterForm = document.getElementById('newsletter-form');
+  const newsletterMessage = document.getElementById('newsletter-message');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailInput = newsletterForm.querySelector('input[type="email"]');
+      if (emailInput && emailInput.value) {
+        if (newsletterMessage) {
+          newsletterMessage.textContent = '✓ Thank you for subscribing!';
+          newsletterMessage.hidden = false;
+          emailInput.value = '';
+          setTimeout(() => {
+            newsletterMessage.hidden = true;
+          }, 3000);
+        }
+      }
+    });
   }
 
   continentButtons.forEach(btn => {

@@ -88,3 +88,28 @@ Notes:
 - Add `.env.local` with `MONGODB_URI` to connect to your database.
 
 If you want, I can scaffold a Next.js app under `next-app/` in this workspace (pages, api, and seed import script). Tell me if you want me to create that now.
+
+
+
+Help me deploy this project to GitHub Pages. Generate:
+
+1. A .gitignore file appropriate for a vanilla HTML/CSS/JS project
+
+2. The exact terminal commands to:
+   - Initialise a git repo in this folder
+   - Create an initial commit with all files
+   - Create a new GitHub repo via GitHub CLI (gh repo create)
+   - Push to main branch
+   - Enable GitHub Pages from the main branch root
+
+3. A GitHub Actions workflow file at .github/workflows/deploy.yml that:
+   - Triggers on every push to main
+   - Validates HTML using html-validate (npm package)
+   - Deploys to GitHub Pages automatically using actions/deploy-pages
+
+4. Update the README.md with:
+   - Project description
+   - Live site URL placeholder: https://[username].github.io/travel-guide
+   - Local development instructions
+   - Folder structure overview
+   - How to add a new destination (edit destinations.js)
