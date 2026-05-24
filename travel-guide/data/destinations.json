@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Cinque Terre",
+    "country": "Italy",
+    "continent": "Europe",
+    "description": "Colorful seaside villages, coastal hikes and fresh seafood.",
+    "imageUrl": "https://picsum.photos/seed/cinque/800/600",
+    "budget": "mid",
+    "tags": ["coast", "hiking", "culture"],
+    "rating": 4.7
+  },
+  {
+    "id": 2,
+    "name": "Kyoto",
+    "country": "Japan",
+    "continent": "Asia",
+    "description": "Historic temples, tea houses and seasonal cherry blossoms.",
+    "imageUrl": "https://picsum.photos/seed/kyoto/800/600",
+    "budget": "mid",
+    "tags": ["temples", "culture", "food"],
+    "rating": 4.8
+  },
+  {
+    "id": 3,
+    "name": "Machu Picchu",
+    "country": "Peru",
+    "continent": "South America",
+    "description": "Ancient Incan citadel perched high in the Andes.",
+    "imageUrl": "https://picsum.photos/seed/machu/800/600",
+    "budget": "high",
+    "tags": ["history", "trekking", "mountains"],
+    "rating": 4.9
+  },
+  {
+    "id": 4,
+    "name": "Reykjavík",
+    "country": "Iceland",
+    "continent": "Europe",
+    "description": "Gateway to glaciers, hot springs and dramatic landscapes.",
+    "imageUrl": "https://picsum.photos/seed/reykjavik/800/600",
+    "budget": "high",
+    "tags": ["nature", "hot-springs", "northern-lights"],
+    "rating": 4.6
+  },
+  {
+    "id": 5,
+    "name": "Cape Town",
+    "country": "South Africa",
+    "continent": "Africa",
+    "description": "Atlantic coast beauty with mountains, vineyards and beaches.",
+    "imageUrl": "https://picsum.photos/seed/capetown/800/600",
+    "budget": "mid",
+    "tags": ["beach", "mountains", "wine"],
+    "rating": 4.5
+  },
+  {
+    "id": 6,
+    "name": "Hội An",
+    "country": "Vietnam",
+    "continent": "Asia",
+    "description": "Well-preserved town with lantern-lit streets and riverside cafes.",
+    "imageUrl": "https://picsum.photos/seed/hoian/800/600",
+    "budget": "low",
+    "tags": ["historic", "food", "photography"],
+    "rating": 4.6
+  }
+]
