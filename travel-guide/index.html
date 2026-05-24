@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Guide — Explore the World</title>
+    <meta name="description" content="A simple travel guide showcasing destinations, tips and inspiration." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Travel Guide — Explore the World" />
+    <meta property="og:description" content="A simple travel guide showcasing destinations, tips and inspiration." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="https://picsum.photos/seed/og/1200/630" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script type="module" src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="site-header">
+      <div class="site-header__inner container">
+        <a class="site-brand" href="index.html" aria-label="WanderGuide home">
+          <span class="site-brand__mark" aria-hidden="true">✈</span>
+          <span class="site-brand__text">WanderGuide</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-navigation">
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+          <span class="menu-toggle__line"></span>
+        </button>
+
+        <div class="site-nav__panel" id="site-navigation">
+          <nav class="site-nav" aria-label="Main navigation">
+            <ul>
+              <li><a href="#destinations-section">Destinations</a></li>
+              <li><a href="#tips-section">Tips</a></li>
+              <li><a href="#about-section">About</a></li>
+            </ul>
+          </nav>
+
+          <a class="cta-button" href="#search-input">Start Planning</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__overlay"></div>
+        <div class="hero__content container">
+          <p class="hero__eyebrow">Plan smarter. Travel farther.</p>
+          <h2 id="hero-title">Your next adventure starts here</h2>
+          <p class="hero__subtitle">Discover destinations, plan trips, travel smart</p>
+
+          <form class="hero__search" id="hero-search-form">
+            <label class="sr-only" for="search-input">Search destinations</label>
+            <input type="search" id="search-input" placeholder="Search destinations" />
+            <button type="submit">Search destinations</button>
+          </form>
+
+          <a class="hero__scroll-indicator" href="#destinations-section" aria-label="Scroll to destinations">
+            <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="destinations-section" aria-labelledby="featured-heading">
+        <div class="container">
+          <div class="destinations-header">
+            <h2 id="featured-heading">Explore Destinations</h2>
+            <div class="filter-status">
+              <span id="filter-count" class="filter-count">Filters (0)</span>
+              <button id="clear-filters" class="clear-filters" hidden>Clear all filters</button>
+            </div>
+          </div>
+
+          <div class="sr-only" id="aria-live-region" aria-live="polite"></div>
+
+          <div class="destinations__filters">
+            <fieldset class="filter-group">
+              <legend class="filter-group__label">Continent</legend>
+              <div class="filter-buttons">
+                <button class="filter-button is-active" data-continent="all">All</button>
+                <button class="filter-button" data-continent="Asia">Asia</button>
+                <button class="filter-button" data-continent="Europe">Europe</button>
+                <button class="filter-button" data-continent="South America">Americas</button>
+                <button class="filter-button" data-continent="Africa">Africa</button>
+              </div>
+            </fieldset>
+
+            <fieldset class="filter-group">
+              <legend class="filter-group__label">Budget</legend>
+              <div class="filter-buttons">
+                <button class="filter-button is-active" data-budget="all">All</button>
+                <button class="filter-button" data-budget="low">Budget</button>
+                <button class="filter-button" data-budget="mid">Mid-range</button>
+                <button class="filter-button" data-budget="high">Luxury</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <div id="destinations-grid" class="destinations-grid"></div>
+        </div>
+      </section>
+
+      <section class="container" id="tips-section" aria-labelledby="tips-heading">
+        <h3 id="tips-heading">Tips</h3>
+        <p>Pack light, plan buffers between transfers, and keep digital copies of essential documents.</p>
+      </section>
+
+      <section class="container" id="about-section" aria-labelledby="about-heading">
+        <h3 id="about-heading">About</h3>
+        <p>WanderGuide helps you explore destinations and build better travel plans from one clean interface.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Travel Guide</p>
+      </div>
+    </footer>
+  </body>
+</html>
